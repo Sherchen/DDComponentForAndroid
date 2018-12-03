@@ -13,5 +13,5 @@ public class ReadBookServiceImpl implements ReadBookService {
     @Override
     public Fragment getReadBookFragment() {
         return new ReaderFragment();
-    }
+}
 }

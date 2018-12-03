@@ -1,0 +1,2 @@
+1. isRegisterCompoAuto=true,插件会自动插入，如果false，需要反射注入组件
+2. isRunAlone=true 独立运行的app, 如果false，则是一个组件

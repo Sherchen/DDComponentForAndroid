@@ -37,6 +37,7 @@ class ComCodeTransform extends Transform {
                 continue
             }
             if (isActivator(ctClass)) {
+                //wsq 收集IApplicationLike的实现类
                 activators.add(ctClass)
             }
         }
@@ -147,6 +148,7 @@ class ComCodeTransform extends Transform {
 
     private boolean isActivator(CtClass ctClass) {
         try {
+            //wsq 判断ctClass类是不是实现了IApplicationLike接口
             for (CtClass ctClassInter : ctClass.getInterfaces()) {
                 if ("com.luojilab.component.componentlib.applicationlike.IApplicationLike".equals(ctClassInter.name)) {
                     return true
